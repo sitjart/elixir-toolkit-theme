@@ -8,6 +8,7 @@
   {%- else %}
   {%- assign events = site.data.events | sort: "startDate" | reverse %}
     {%- endif %}
+  {%- assign count = 0 %}
   <ul class="list-unstyled mt-3">
     {%- for event in events %}
     <li class='{{include.event_type}}' data-start='{{ event.startDate}}'>
